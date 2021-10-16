@@ -1,0 +1,15 @@
+@import "./shared/styles/mixins.scss";
+
+main {
+  padding: 1rem;
+  font-family: "Arial";
+  width: 100%;
+  @include breakpoint(medium) {
+    max-width: 60rem; // 960px
+    margin: 0 auto;
+  }
+}
+
+:global(a) {
+  text-decoration: none;
+}

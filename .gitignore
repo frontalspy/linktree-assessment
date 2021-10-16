@@ -1,0 +1,10 @@
+node_modules
+
+# OS Files
+.DS_Store
+
+# IDE local files
+.vs
+.vscode
+
+dist

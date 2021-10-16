@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "strict": true,
+    "target": "es5",
+    "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "lib": ["es6", "dom"],
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "typeRoots": ["src/types", "node_modules/@types"]
+  },
+  "include": ["src"]
+}
