@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "npx webpack serve --open --config config/webpack.config.js --mode development",
-    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register -r config/babel-register.js -r src/setup-test.ts 'src/**/*.{spec,test}.{tsx,ts}'"
+    "test": "mocha -r ts-node/register -r config/babel-register.js -r src/setup-test.ts 'src/**/*.{spec,test}.{tsx,ts}'",
+    "//": "@TODO Tests are currently broken thanks to babel and webpack shennanigans, should resolve it soon-ish"
   },
   "dependencies": {
     "@types/react": "^17.0.30",
