@@ -28,10 +28,15 @@ export const MusicLink: React.FC<MusicLinkProps> = ({ link, preferences }) => {
           {audio && (
             <div className="playing">
               {/* @TODO prob use an iframe here? Or another API call to get song name artist name */}
-              <div className="song-image"></div>
+              <div className="song-image">
+                <div className="image"></div>
+              </div>
               <div className="song-play">
+                {/* @TODO inline SVG to allow for colour changes */}
                 <img src={play} alt="Play button" />
               </div>
+              {/* @TODO insert a scrubble prgoress bar here */}
+              <div className="progress"></div>
               <div className="song-name">Song name - Artists name</div>
               <audio src={audio} />
             </div>

@@ -1,10 +1,9 @@
 import React from "react";
+import arrow from "../../../../assets/icons/arrow.svg";
 import { musicIcons } from "../../icons.consts";
-import { capitalise } from "../../text.utils";
+import { capitalise, removeSymbols } from "../../text.utils";
 import { MusicLinkInterface } from "../links.types";
 import style from "./item-music-link.scss";
-
-import arrow from "../../../../assets/icons/arrow.svg";
 
 interface MusicItemProps {
   song: MusicLinkInterface;
@@ -28,7 +27,7 @@ export const MusicLinkItem: React.FC<MusicItemProps> = ({ song, callback }) => {
       </div>
       <div className="platform">
         <button onClick={setAudio}>
-          {capitalise(platform)} <img src={arrow} />
+          {capitalise(removeSymbols(platform))} <img src={arrow} />
         </button>
       </div>
     </div>
@@ -39,9 +38,9 @@ const renderIcon = (platform: string) => {
   switch (platform) {
     case "spotify":
       return musicIcons.SPOTIFY;
-    case "applemusic":
+    case "apple-music":
       return musicIcons.APPLEMUSIC;
-    case "youtubemusic":
+    case "youtube-music":
       return musicIcons.YOUTUBEMUSIC;
     case "soundcloud":
       return musicIcons.SOUNDCLOUD;

@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
 button {
   background-color: transparent;
   border: none;
@@ -22,33 +25,29 @@ a {
 }
 
 .grid {
-  display: flex;
-  flex-flow: wrap row;
-  width: 100%;
-  background-color: #eaeaea;
-  transition: filter 0.3s ease-in-out;
-  &:hover,
-  &:focus,
-  &:active {
-    filter: invert(1);
-  }
+  @extend %invertOnHover;
+  background-color: $background-grey;
+  padding: 0 0.5rem;
+  align-items: center;
 }
 
 .icon {
   flex: 1 1 2.5rem;
   max-width: 2.5rem;
+  text-align: center;
+
+  :global(img) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .platform {
   flex: 1 1 auto;
   position: relative;
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    bottom: 0;
-    height: 2px;
-    background-color: #969696;
-    right: 0;
-  }
+}
+
+img {
+  // Supplied arrow is facing down
+  transform: rotateZ(-90deg);
 }

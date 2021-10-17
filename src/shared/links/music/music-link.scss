@@ -1,9 +1,45 @@
+@import "../../styles/variables.scss";
+
 .music-items {
   margin-top: -1rem;
+  background-color: $background-grey;
+  margin-bottom: 1rem;
+
+  :global(.grid:not(:last-of-type) .platform:after) {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: calc(100% - 1rem);
+    height: 1px;
+    background-color: #ccc;
+    transition: filter 0.3s ease-in-out;
+  }
 }
 
 .song-image {
-  width: 24px;
-  height: 24px;
+  flex: 1 1 48px;
+  max-width: 48px;
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  width: 32px;
+  height: 32px;
   background-color: red;
+}
+
+.playing {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+}
+
+.song-play {
+  margin-right: 0.5rem;
 }
