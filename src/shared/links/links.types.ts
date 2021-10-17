@@ -28,7 +28,7 @@ type MusicLinkType = {
   link: MusicLinkInterface[];
 };
 
-export type Links = ClassicLinkType | ShowsLinkType | MusicLinkType;
+export type LinksTypes = ClassicLinkType | ShowsLinkType | MusicLinkType;
 
 export enum LinkTypes {
   CLASSIC = "classic",

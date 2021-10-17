@@ -1,16 +1,15 @@
 import React from "react";
 import { UserPreferences } from "../../user/user";
-import { Links, LinkTypes } from "./links.types";
+import { LinksTypes, LinkTypes } from "./links.types";
 import { ClassicLink } from "./classic/classic-link";
 import { MusicLink } from "./music/music-link";
 import { ShowsLink } from "./shows/shows-link";
 
 interface LinksProps {
-  link: Links;
+  link: LinksTypes;
   preferences?: UserPreferences;
-  callback?: () => void;
 }
-export const Link: React.FC<LinksProps> = ({
+export const Links: React.FC<LinksProps> = ({
   link,
   preferences = {
     backgroundColor: "green",

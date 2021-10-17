@@ -24,16 +24,14 @@ export const ShowsLink: React.FC<MusicLinkProps> = ({ link, preferences }) => {
         preferences={preferences}
       />
       {open && (
-        <>
-          <div className="show-items">
-            {link.map((linkItem) => (
-              <ShowLinkItem link={linkItem} />
-            ))}
-            <div className="songkick">
-              <img src={songkick} alt={"Songkick logo"} />
-            </div>
+        <div className="show-items">
+          {link.map((linkItem) => (
+            <ShowLinkItem link={linkItem} />
+          ))}
+          <div className="songkick">
+            <img src={songkick} alt={"Songkick logo"} />
           </div>
-        </>
+        </div>
       )}
     </div>
   );
