@@ -7,10 +7,10 @@ import soundcloud from "../../assets/icons/soundcloud.svg";
 import tidal from "../../assets/icons/tidal.svg";
 
 export const musicIcons = {
-  APPLEMUSIC: <img src={appleMusic} />,
-  SPOTIFY: <img src={spotify} />,
-  DEEZER: <img src={deezer} />,
-  YOUTUBEMUSIC: <img src={youtube} />,
-  SOUNDCLOUD: <img src={soundcloud} />,
-  TIDAL: <img src={tidal} />,
+  APPLEMUSIC: <img src={appleMusic} alt="Apple Music Logo" />,
+  SPOTIFY: <img src={spotify} alt="Spotify Logo" />,
+  DEEZER: <img src={deezer} alt="Deezer Logo" />,
+  YOUTUBEMUSIC: <img src={youtube} alt="Youtube Music Logo" />,
+  SOUNDCLOUD: <img src={soundcloud} alt="Soundcloud Logo" />,
+  TIDAL: <img src={tidal} alt="Tidal Logo" />,
 };
