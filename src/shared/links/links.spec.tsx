@@ -1,11 +1,13 @@
 import { expect } from "chai";
-import { Links } from "./links";
-import { ShallowWrapper, shallow } from "enzyme";
+import { shallow, ShallowWrapper } from "enzyme";
+import React from "react";
 import { createSandbox, SinonSandbox } from "sinon";
+import { MockUserPreference } from "../../user/user.mock";
+import { ClassicLink } from "./classic/classic-link";
+import { Links } from "./links";
+import { LinkTypes } from "./links.types";
 import { MusicLink } from "./music/music-link";
 import { ShowsLink } from "./shows/shows-link";
-import { ClassicLink } from "./classic/classic-link";
-import { MockUserPreference } from "../../user/user.mock";
 
 describe("Links", () => {
   let sandbox: SinonSandbox;
@@ -25,7 +27,7 @@ describe("Links", () => {
       it("should return MusicLink when link type is music", () => {
         const loadLink = loadLinks({
           link: {
-            linkType: "music",
+            linkType: LinkTypes.MUSIC,
           },
         });
         expect(loadLink.find(MusicLink).exists()).to.be.true;
@@ -33,7 +35,7 @@ describe("Links", () => {
       it("should return ShowsLink when link type is shows", () => {
         const loadLink = loadLinks({
           link: {
-            linkType: "shows",
+            linkType: LinkTypes.SHOWS,
           },
         });
         expect(loadLink.find(ShowsLink).exists()).to.be.true;
@@ -41,7 +43,7 @@ describe("Links", () => {
       it("should return ClassicLink when link type is classic", () => {
         const loadLink = loadLinks({
           link: {
-            linkType: "classic",
+            linkType: LinkTypes.CLASSIC,
           },
         });
         expect(loadLink.find(ClassicLink).exists()).to.be.true;
@@ -59,7 +61,7 @@ describe("Links", () => {
       it("should pass on custom preferences to child component", () => {
         const loadLink = loadLinks({
           link: {
-            linkType: "music",
+            linkType: LinkTypes.CLASSIC,
           },
           preferences: MockUserPreference,
         });
@@ -70,7 +72,7 @@ describe("Links", () => {
       it("should use default preferences if not defined child component", () => {
         const loadLink = loadLinks({
           link: {
-            linkType: "music",
+            linkType: LinkTypes.CLASSIC,
           },
         });
         expect(loadLink.find(ClassicLink).props().preferences).to.be.deep.eq({

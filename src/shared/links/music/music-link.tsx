@@ -42,7 +42,11 @@ export const MusicLink: React.FC<MusicLinkProps> = ({ link, preferences }) => {
             </div>
           )}
           {link.map((musicLink) => (
-            <MusicLinkItem song={musicLink} callback={setAudio} />
+            <MusicLinkItem
+              song={musicLink}
+              callback={setAudio}
+              key={musicLink.platform}
+            />
           ))}
         </div>
       )}

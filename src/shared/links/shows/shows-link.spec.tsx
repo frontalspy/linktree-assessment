@@ -1,10 +1,11 @@
-import { shallow, ShallowWrapper } from "enzyme";
-import { createSandbox, SinonSandbox } from "sinon";
-import { ShowsLink } from "./shows-link";
-import { MockMusicLink, MockShowsLink } from "../links.mock";
 import { expect } from "chai";
+import { shallow, ShallowWrapper } from "enzyme";
+import React from "react";
+import { createSandbox, SinonSandbox } from "sinon";
 import { LinkItem } from "../item-link";
+import { MockShowsLink } from "../links.mock";
 import { ShowLinkItem } from "./item-shows-link";
+import { ShowsLink } from "./shows-link";
 
 describe("Shows Links", () => {
   let sandbox: SinonSandbox;
@@ -22,7 +23,7 @@ describe("Shows Links", () => {
   describe("when loading", () => {
     it("should render LinkItem only", () => {
       const links = loadLinks({
-        links: MockShowsLink,
+        link: MockShowsLink,
       });
       expect(links.find(LinkItem).exists()).to.be.true;
       expect(links.find(ShowLinkItem).exists()).to.be.false;
@@ -31,7 +32,7 @@ describe("Shows Links", () => {
   describe("when interacting", () => {
     it("should render 4 ShowLinkItems when LinkItem callback is triggered", () => {
       const links = loadLinks({
-        links: MockShowsLink,
+        link: MockShowsLink,
       });
       links.find(LinkItem).props().callback?.call(this);
       expect(links.find(ShowLinkItem).exists()).to.be.true;

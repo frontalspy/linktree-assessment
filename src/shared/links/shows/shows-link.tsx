@@ -26,7 +26,7 @@ export const ShowsLink: React.FC<MusicLinkProps> = ({ link, preferences }) => {
       {open && (
         <div className="show-items">
           {link.map((linkItem) => (
-            <ShowLinkItem link={linkItem} />
+            <ShowLinkItem link={linkItem} key={linkItem.timeDate} />
           ))}
           <div className="songkick">
             <img src={songkick} alt={"Songkick logo"} />

@@ -1,10 +1,10 @@
 import React from "react";
 import appleMusic from "../../assets/icons/apple-music.svg";
-import spotify from "../../assets/icons/spotify.svg";
 import deezer from "../../assets/icons/deezer.svg";
-import youtube from "../../assets/icons/youtube.svg";
 import soundcloud from "../../assets/icons/soundcloud.svg";
+import spotify from "../../assets/icons/spotify.svg";
 import tidal from "../../assets/icons/tidal.svg";
+import youtube from "../../assets/icons/youtube.svg";
 
 export const musicIcons = {
   APPLEMUSIC: <img src={appleMusic} alt="Apple Music Logo" />,

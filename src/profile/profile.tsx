@@ -10,8 +10,8 @@ export const Profile = () => {
   return (
     <section className="profile">
       <ProfileHeader />
-      {userLinks?.map((link) => (
-        <Links link={link} preferences={preferences} />
+      {userLinks?.map((link, index) => (
+        <Links link={link} preferences={preferences} key={index} />
       ))}
     </section>
   );

@@ -9,6 +9,6 @@ import sinonChai from "sinon-chai";
 configure({ adapter: new Adapter() });
 chai.use(sinonChai);
 
-for (const ext of [".scss", ".svg", ".jpg", ".png"]) {
+for (const ext of [".scss", ".svg", ".jpg", ".png", ".css"]) {
   require.extensions[ext] = () => {};
 }

@@ -1,12 +1,12 @@
-import { shallow, ShallowWrapper } from "enzyme";
-import { createSandbox, SinonSandbox, SinonStub } from "sinon";
 import { expect } from "chai";
-import { Profile } from "./profile";
-
+import { shallow, ShallowWrapper } from "enzyme";
+import React from "react";
+import { createSandbox, SinonSandbox, SinonStub } from "sinon";
 import * as ApiHooks from "../shared/api.hooks";
-import { MockLinks } from "../shared/links/links.mock";
 import { Links } from "../shared/links/links";
+import { MockLinks } from "../shared/links/links.mock";
 import { MockUserPreference } from "../user/user.mock";
+import { Profile } from "./profile";
 
 describe("Shows Links", () => {
   let sandbox: SinonSandbox;
@@ -36,7 +36,7 @@ describe("Shows Links", () => {
       preferencesStub.returns(MockUserPreference);
       const profile = loadProfile();
       expect(profile.find(Links).exists()).to.be.true;
-      expect(profile.find(Links).props().preferences).to.be.deep.eq(
+      expect(profile.find(Links).at(0).props().preferences).to.be.deep.eq(
         MockUserPreference
       );
     });
