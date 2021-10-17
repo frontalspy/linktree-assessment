@@ -13,3 +13,9 @@ main {
 :global(a) {
   text-decoration: none;
 }
+
+:global(.grid) {
+  display: flex;
+  flex-flow: wrap row;
+  width: 100%;
+}
