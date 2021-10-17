@@ -1,0 +1,25 @@
+@import "../../styles/variables.scss";
+
+.show-items :global(.show:not(:last-of-type) .grid:after) {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(100% - 2rem);
+  bottom: 0;
+  height: 1px;
+  background-color: #ccc;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: filter 0.3s ease-in-out;
+}
+
+.songkick {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.show-items {
+  background-color: $background-grey;
+  margin-bottom: 1rem;
+}
