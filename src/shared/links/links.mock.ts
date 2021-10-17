@@ -57,17 +57,17 @@ export const MockMusicLink: MusicLinkInterface[] = [
     music: "https://www.spotify.com/sample.mp4",
   },
   {
-    platform: "Apple Music",
+    platform: "apple-music",
     platformLink: "https://www.apple.com/music",
     music: "https://www.apple.com/music/sample.mp4",
   },
   {
-    platform: "Soundcloud",
+    platform: "soundcloud",
     platformLink: "https://www.soundcloud.com",
     music: "https://www.soundcloud.com/sample.mp4",
   },
   {
-    platform: "Youtube Music",
+    platform: "youtube-music",
     platformLink: "https://www.youtube.com/music",
     music: "https://www.youtube.com/music.mp4",
   },
