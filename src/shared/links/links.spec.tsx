@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { Link } from "./links";
+import { Links } from "./links";
 import { ShallowWrapper, shallow } from "enzyme";
 import { createSandbox, SinonSandbox } from "sinon";
 import { MusicLink } from "./music/music-link";
@@ -9,11 +9,11 @@ import { MockUserPreference } from "../../user/user.mock";
 
 describe("Links", () => {
   let sandbox: SinonSandbox;
-  let loadLinks: (props?: any) => ShallowWrapper<typeof Link>;
+  let loadLinks: (props?: any) => ShallowWrapper<typeof Links>;
 
   beforeEach(() => {
     sandbox = createSandbox();
-    loadLinks = (props?: any) => shallow(<Link {...props} />);
+    loadLinks = (props?: any) => shallow(<Links {...props} />);
   });
 
   afterEach(() => {
