@@ -61,3 +61,12 @@ Some level of testing is expected for your solution. As a guide, try to meet the
 Set up your own git repository and make commits as you would in your day to day work. Submit a link to your repo when you're finished.
 
 Best of luck! :rocket: :blush:
+
+#
+
+Steps to run
+
+`yarn`
+`yarn start`
+
+Will open browser in port `3000`
