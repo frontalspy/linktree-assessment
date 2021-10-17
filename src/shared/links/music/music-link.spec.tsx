@@ -33,7 +33,7 @@ describe("Music Links", () => {
       const links = loadLinks({
         links: MockMusicLink,
       });
-      links.find(LinkItem).props().callback.call(this);
+      links.find(LinkItem).props().callback?.call(this);
       expect(links.find(MusicLinkItem).exists()).to.be.true;
       expect(links.find(MusicLinkItem).length).to.be.eq(4);
     });
@@ -41,8 +41,11 @@ describe("Music Links", () => {
       const links = loadLinks({
         links: MockMusicLink,
       });
-      links.find(LinkItem).props().callback.call(this);
-      links.find(MusicLinkItem).props().callback.call(this);
+      links.find(LinkItem).props().callback?.call(this);
+      links
+        .find(MusicLinkItem)
+        .props()
+        .callback?.call(this, {} as any);
       expect(links.find(".playing").exists()).to.be.true;
     });
   });

@@ -1,6 +1,6 @@
 import {
   ClassicLinkInterface,
-  Links,
+  LinksTypes,
   LinkTypes,
   MusicLinkInterface,
   ShowsLinkInterface,
@@ -73,7 +73,7 @@ export const MockMusicLink: MusicLinkInterface[] = [
   },
 ];
 
-export const MockLinks: Links[] = [
+export const MockLinks: LinksTypes[] = [
   {
     linkType: LinkTypes.MUSIC,
     link: MockMusicLink,

@@ -33,7 +33,7 @@ describe("Shows Links", () => {
       const links = loadLinks({
         links: MockShowsLink,
       });
-      links.find(LinkItem).props().callback.call(this);
+      links.find(LinkItem).props().callback?.call(this);
       expect(links.find(ShowLinkItem).exists()).to.be.true;
       expect(links.find(ShowLinkItem).length).to.be.eq(4);
     });

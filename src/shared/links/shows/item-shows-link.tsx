@@ -11,7 +11,12 @@ export const ShowLinkItem: React.FC<ShowLinkItemProps> = ({ link }) => {
   return (
     <div className="show">
       <style jsx>{style}</style>
-      <a href={link.link} className="grid">
+      <a
+        href={link.link}
+        className="grid"
+        target="_blank"
+        rel="noopener nofollow"
+      >
         <span className="content">
           <span className="date">{formatDate(link.timeDate)}</span>
           <span className="location">{link.location}</span>
